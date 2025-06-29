@@ -1,0 +1,442 @@
+body {
+  font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
+}
+p {
+  font-size: 15px;
+}
+
+/*================
+ PC用のスタイル 
+=================*/
+ /* 横幅設定 */
+ body {
+   overflow-x: hidden;
+   padding: 0;
+   margin: 0;
+ }
+ html{
+  margin: 0;
+  padding: 0;  
+}
+ 
+ /* ヘッダー */
+
+ /* ナビゲーションのレイアウト */
+
+ /* ナビゲーションのリンクの装飾設定 */
+ #nav-pc > a {
+   text-decoration: none;
+   margin-left: 20px;
+ }
+ #nav-pc > a:link,
+ #nav-pc > a:visited,
+ #nav-pc > a:hover,
+ #nav-pc > a:active {
+  color: #fff;
+}
+#nav-pc a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* メインビジュアル*/
+/* メインビジュアル全体を背景にする */
+/* メインビジュアル全体 */
+#main-visual {
+  position: relative;
+  overflow: hidden;
+    height: 100vh;
+    width: 100%;
+}
+
+/* 背景画像 */
+#main-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ヘッダー内要素を絶対配置に */
+#main-visual header {
+  font-size: 20px;
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  color: #fff;
+}
+
+
+/* ロゴ画像 */
+#logo img {
+  height: 200px;
+  width: auto;
+}
+
+
+/* キャッチコピー（左下） */
+#main-message {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  background-color: #E9CB64;
+  padding: 20px 30px;
+  color: #000;
+  z-index: 10;
+}
+
+#main-message p {
+  font-size: 24px;
+  margin: 5px 0;
+}
+
+
+#news { 
+   top: 900px;
+   background-color: #B1172F;
+   color: #ffffff;  
+   height: 150px;
+   width:  auto;
+ }
+ #info {
+  display: flex;
+ }
+ #info h1 {
+  margin: 50px;
+  font-size: 34px;
+  align-items: flex-start; 
+}
+
+#info p {
+margin-top: 60px;
+ font-size: 20px;
+}
+
+ 
+/* About */
+
+h2 {
+  font-size: 34px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+hr {
+  border: none;
+  border-top: 2px solid #333; /* 線の太さと色 */
+  margin: 10px 0;
+  width: 300px; /* 幅を調整 */
+}
+h3 {
+  font-size: 24px;
+  font-weight: lighter;
+  margin-left: 20px;
+}
+
+/* １つめのabout　*/
+.section-flex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 50px 50px 50px;
+  position: relative;
+  
+}
+
+.img-box {
+  width: 60%;
+  position: relative;
+  z-index: 1;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
+}
+
+.kictin {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-profile {
+  width: 40%;
+  background-color: #B1172F;
+  color: white;
+  padding: 20px;
+  display: block;
+  position: relative;
+  z-index: 2;
+box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
+ 
+}
+.about-profile h2 {
+  font-size: 22px;
+  color: #E9CB64;
+  text-align: center;
+}
+
+.overlap-left {
+  margin-top: 80px;     /* 高さをずらす */
+  margin-left:  -20px;  /* 少しだけ画像にかぶる */
+}
+
+/*  下２つのabout　*/
+.section-flex4 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 30px;
+  position: relative;
+}
+.section-flex2 { 
+  justify-content: center;
+  align-items: flex-end;
+  margin: 50px;
+  position: relative;
+}
+
+/* ２つめのabout　*/
+/* 画像　*/
+.kictin2 {
+  width: 100%;
+  height: auto;
+  margin-top: 60px;
+  transform: scale(1.6);
+  transform-origin: left center; /* 左側起点で拡大 */
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
+  
+}
+/* 文章　*/
+.about-profile2 {
+  width: 60%;
+  background-color: #E9CB64;
+  color: #000;
+  padding: 20px;
+  display: block;
+  position: relative;
+  z-index: 2;
+  margin-top: -20px;
+  margin-left: 50px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
+}
+/* 3つめのabout　*/
+/* 画像　*/
+.kictin3 {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: -60px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
+}
+/* 文章　*/
+.about-profile3 {
+  width: 60%;
+  background-color: #B1172F;
+  color: #fff;
+  padding: 20px;
+  display: block;
+  position: relative;
+  z-index: 2;  
+  margin-left: 50px;
+  margin-top: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
+}
+
+/* ランチ　*/
+.menu {
+  position: relative;
+  text-align: right; 
+}
+.line {
+  display: inline-block;
+  border-top: 2px solid #333;
+  width: 300px;
+}
+.menu h2 {
+  margin-right: 20px;
+}
+.menu h3 {
+  margin-right: 20px;
+}
+
+
+/* 画像と文章を横並びにさせる */
+#about-flex {
+  display: flex;
+  justify-content: center;
+  margin-top: -50px;  
+}
+#about-flex img {
+width: 50%;
+height: auto;
+margin-left: 20px;
+box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
+ 
+}
+#about-flex p {
+  font-size: 20px;
+}
+.about-lunch {
+  width: 40%;
+  height: auto;
+  background-color: #497D46;
+  color: #fff;
+  padding: 20px;
+  display: block;
+  position: relative;
+  z-index: 2;  
+  margin-left: 20px;
+  margin-top: 100px;
+  text-align: center;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
+
+}
+/* ボタン　*/
+.menu-button {
+  display: block;
+  background-color: #3D321D;
+  color: #fff;
+  text-align: center;
+  width: 300px;
+  height: auto;
+  padding: 20px;
+  margin-left: 500px ;
+  margin-top: 40px;
+  text-decoration: none;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
+ 
+}
+
+.menu-button:hover {
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4); /* ホバー時に少し強く */
+  text-decoration: underline;
+}
+
+
+  /* ディナー　*/
+  .dinner-img {
+    margin-top: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
+  }
+  .about-dinner {
+  width: 40%;
+  height: auto;
+  background-color: #497D46;
+  color: #fff;
+  padding: 20px;
+  display: block;
+  position: relative;
+  z-index: 2;  
+  margin-right: 20px;
+  margin-top: 100px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
+
+  }
+  .eat-concept {
+    padding: 20px;
+    text-align: left;
+  }
+  
+/*ギャラリー*/
+  .gallary{
+    margin-top: 30px;
+    background-color: #F7F6F5;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 16px 0 16px 0; 
+  }
+
+#blog-flex {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+}
+#blog-flex img {
+  width: 100%;
+  height: auto;
+}
+
+/* ロケーション　*/
+.company {
+  display: flex;
+  justify-content: center;
+  gap:60px;
+}
+#company-table {
+
+border-collapse: separate;      /* セルの分離を許可（重要！） */
+border-spacing: 10px 30px;         /* 横：0px、縦：16pxの余白 */
+}
+
+#company-table th {
+  text-align: left;
+}
+#company-table td {
+  padding-left: 100px; /* th と td の間の余白 */
+}
+#company-table td,
+#company-table th {
+  border-bottom: 1px solid #000; /* 行の下に線 */
+  padding: 12px 8px;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.map iframe {
+  width: 100%;
+  max-width: 600px; /* テーブルに合わせた幅 */
+  height: 350px;     /* ←ここを固定することで縦長を防ぐ */
+  display: block;
+  margin: 0 auto;
+  border: 0;
+}
+
+
+/* フッター */
+.footer-arrow {
+  font-size: 40px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+ footer {
+   background-color: #B1172F;
+   text-align: center;
+   padding: 60px 40px 30px;
+   color: white;
+  font-family: sans-serif;
+ } 
+ #footer-logo img{
+  justify-content: center;
+ }
+.footer-link {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* 各リンクの間に30pxの余白 */
+  margin-bottom: 20px;
+}
+
+ .footer-link > a:link,
+ .footer-link > a:visited,
+ .footer-link > a:hover,
+ .footer-link > a:active {
+  color: #fff;
+  text-decoration: none;
+}
+.footer-link a:hover {
+  text-decoration: underline;
+}
+/* 著作権表示部分のスタイル */
+.footer-copyright {
+  margin-top: 30px;
+  font-size: 13px;
+  color: #888;
+}
+
