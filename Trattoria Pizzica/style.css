@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
 body {
   font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
 }
@@ -17,6 +18,7 @@ p {
  html{
   margin: 0;
   padding: 0;  
+  
 }
  
  /* ヘッダー */
@@ -82,27 +84,63 @@ p {
 /* キャッチコピー（左下） */
 #main-message {
   position: absolute;
+  bottom: 160px;
+  left: 40px;
+  background-color: #E9CB64;
+  padding: 0 30px;
+  color: #000;
+  z-index: 10;
+}
+#main-message2 {
+  position: absolute;
   bottom: 40px;
   left: 40px;
   background-color: #E9CB64;
-  padding: 20px 30px;
+  padding: 0 30px;
   color: #000;
   z-index: 10;
 }
 
 #main-message p {
-  font-size: 24px;
-  margin: 5px 0;
+  font-size: 26px;
+}
+
+#main-message2 p {
+  font-size: 26px;
 }
 
 
+
+
+
+
 #news { 
-   top: 900px;
-   background-color: #B1172F;
-   color: #ffffff;  
-   height: 150px;
-   width:  auto;
- }
+  position: relative; /* ← これが必須！ */
+  background-color: #B1172F;
+  color: #ffffff;  
+  height: 150px;
+  width: auto;
+}
+
+.handwritten-text {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  font-family: 'Caveat Brush', cursive;
+  font-size: 54px;
+  color: #E9CB64; /* ← 黄色に変更 */
+  transform: rotate(-16deg); /* ← 右上がりの傾き */
+  opacity: 0.9;
+  text-align: right;
+  line-height: 1.2;
+  pointer-events: none;
+}
+
+.line1 {
+  display: inline-block;
+  transform: translateX(-50px); /* ← 左に10pxずらす */
+}
+
  #info {
   display: flex;
  }
@@ -116,6 +154,9 @@ p {
 margin-top: 60px;
  font-size: 20px;
 }
+
+
+
 
  
 /* About */
@@ -150,8 +191,7 @@ h3 {
 
 .img-box {
   width: 60%;
-  position: relative;
-  z-index: 1;
+   
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
 }
 
@@ -159,6 +199,8 @@ h3 {
   width: 100%;
   height: auto;
   display: block;
+ position: relative;
+  z-index: 1;  /* ← 背面に回す */ 
 }
 
 .about-profile {
@@ -168,6 +210,8 @@ h3 {
   padding: 20px;
   display: block;
   position: relative;
+   margin-left: -50px;  /* ← 左に少しかぶるように */
+  top: 100px;   /* ← 下にずらす */
   z-index: 2;
 box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
  
@@ -219,7 +263,7 @@ box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
   position: relative;
   z-index: 2;
   margin-top: -20px;
-  margin-left: 50px;
+  margin-left: 80px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
 }
 /* 3つめのabout　*/
@@ -240,7 +284,7 @@ box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
   display: block;
   position: relative;
   z-index: 2;  
-  margin-left: 50px;
+  margin-left: 80px;
   margin-top: 10px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
 }
@@ -252,7 +296,7 @@ box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
 }
 .line {
   display: inline-block;
-  border-top: 2px solid #333;
+  border-top: 2px solid #E9CB64;
   width: 300px;
 }
 .menu h2 {
@@ -270,31 +314,35 @@ box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
   margin-top: -50px;  
 }
 #about-flex img {
-width: 50%;
-height: auto;
-margin-left: 20px;
-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
-  aspect-ratio: 16 / 9; /* 縦横比（例：16:9） */
-  object-fit: cover;    /* 切り取りや引き伸ばしをコントロール */
+  width: 50%;
+  height: auto;
+  margin-left: 20px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;  /* ← 背面に回す */
 }
+
 #about-flex p {
   font-size: 20px;
 }
 .about-lunch {
+  height: 250px;  /* ← 適切な高さに調整（必要に応じて） */
+
   width: 40%;
-  height: auto;
   background-color: #497D46;
   color: #fff;
   padding: 20px;
   display: block;
   position: relative;
-  z-index: 2;  
-  margin-left: 20px;
-  margin-top: 100px;
+  z-index: 2;
+  margin-left: -50px;  /* ← 左に少しかぶるように */
+  top: 150px;   /* ← 下にずらす */
   text-align: center;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
-
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
 }
+
 /* ボタン　*/
 .menu-button {
   display: block;
@@ -305,7 +353,7 @@ box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
   height: auto;
   padding: 20px;
   margin-left: 500px ;
-  margin-top: 40px;
+  margin-top: 120px;
   text-decoration: none;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
  
@@ -326,20 +374,20 @@ box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
   }
   .about-dinner {
   width: 40%;
-  height: auto;
+  height: 250px;
   background-color: #497D46;
   color: #fff;
   padding: 20px;
   display: block;
   position: relative;
-  z-index: 2;  
-  margin-right: 20px;
-  margin-top: 100px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* ← これを追加 */
+  z-index: 2;
+  margin-right: -50px;  /* ← 画像にかぶせる */
+  top: 150px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
 
-  }
   .eat-concept {
-    padding: 20px;
+    padding: 10px 20px;
     text-align: left;
   }
   
@@ -442,6 +490,132 @@ border-spacing: 10px 30px;         /* 横：0px、縦：16pxの余白 */
   font-size: 13px;
   color: #888;
 }
+
+
+/*メニュー*/
+#menu > div {
+   
+    font-size: 16px;
+    margin-left: 20px ;
+    margin-top: 20px;
+  }
+ 
+/*ランチメニュー*/
+.menu-time {
+font-size: 30px;
+margin: 10px;
+background-color: #B1172F;
+color: #fff;
+padding: 20px;
+text-align: center;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* 影の設定 */
+}
+.menu-title2 {
+  font-size: 22px;
+  text-align: left;
+  margin-left: 20px;
+  padding: 0;
+}
+hr {
+  border: none;              /* デフォルトの線を消す */
+  height: 6px;               /* 線の太さ */
+  background-color:#E9CB64; /* 好きな色に変更 */
+}
+.menu-title3 {
+  font-size: 18px;
+  text-align: left;
+  margin-left: 20px;
+  padding: 0;
+}
+.menu-flex {
+  display: flex;
+  gap: 40px;
+  margin: 20px;
+  
+}
+.menu-img {
+  display: flex;
+  gap: 40px;
+  background-color: #F7F6F5;
+  width: 80%;
+  height: 200px;
+  overflow: hidden;   
+ 
+}
+.menu-img2 {
+  width: 40%;
+  height: auto;
+  object-fit: cover;      /* 枠いっぱいに表示、はみ出た部分はカット */
+  display: block;
+  border-radius: 8px;
+}
+
+.menu-drink {
+    background-color: #F7F6F5;
+    font-size: 20px;
+    margin: 30px ;
+    text-align: left;
+    padding: 0;
+}
+.menu-drink h2 {
+  font-size: 18px;
+  font-weight: lighter;
+  }
+
+.course {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 20px; /* ← 左右に余白をつけて見切れ防止 */
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.course1 {
+  flex: 1;
+  min-width: 250px; /* スマホ対応を意識するなら設定しておくと良い */
+  text-align: center;
+}
+
+.course1 img {
+  width: 100%;
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.image-wrapper {
+  width: 100%;
+  aspect-ratio: 3 / 2; /* 横3 : 縦2の比率で表示（必要に応じて調整） */
+  overflow: hidden;
+  border-radius: 8px;
+}
+.img-g {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 40px;
+}
+.img-g img {
+  width: 18%;
+  height: auto;
+}
+.g-title h2 {
+  text-align: center;
+  background-color: #497D46;
+  color: #F7F6F5;
+  margin: 30px 10px;
+}
+
+
+
+
+
+
+
 
 /*====================
  スマホ用のスタイル（768px以下）
